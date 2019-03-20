@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../../plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
@@ -28,13 +26,9 @@
     <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="player.css">
-
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
         <!-- Left navbar links -->
@@ -130,6 +124,7 @@
         </div>
         <!-- /.sidebar -->
     </aside>
+
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -137,7 +132,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Music Channel</h1>
+                        <h1 class="m-0 text-dark">Recommended Music List</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -147,93 +142,48 @@
         <!-- Main content -->
         <section class="content">
             <div class="row">
-                <div class="col-md-12">
-                    <!-- DIRECT CHAT PRIMARY -->
-                    <div class="card card-default color-palette-box">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                <i class="fa fa-music"></i>
-                                Others' Sharing
-                            </h3>
-                        </div>
-                        <div class="card-body">
-
-                                <!-- Conversations are loaded here -->
-                                <div class="direct-chat-messages col-md-12" style="height:auto">
-                                    <!-- Message. Default to the left -->
-                                    <div class="direct-chat-msg">
-                                        <div class="direct-chat-info clearfix">
-                                            <span class="direct-chat-name float-left">Alexander Pierce</span>
-                                            <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
-                                        </div>
-                                        <!-- /.direct-chat-info -->
-                                        <img class="direct-chat-img" src="../../dist/img/user1-128x128.jpg" alt="Message User Image">
-                                        <!-- /.direct-chat-img -->
-                                        <div class="direct-chat-text">
-                                            <!-- Attachment -->
-                                            <div class="attachment-block clearfix" style="background: transparent;border: none;">
-                                                <img class="attachment-img" src="https://imagizer.imageshack.com/img924/8236/vFPfw4.jpg" alt="Attachment Image">
-
-                                                <div class="attachment-pushed">
-                                                    <h4 class="attachment-heading">Dawn</h4>
-                                                    <div class="attachment-text">
-                                                        Singer: Skylike<br>
-                                                        <audio style="height: 44px;margin-top: 10px;" controls
-                                                               src="http://k003.kiwi6.com/hotlink/hshjwmwndw/2.mp3">
-                                                            Your browser does not support the
-                                                            <code>audio</code> element.
-                                                        </audio>
-                                                    </div>
-                                                    <!-- /.attachment-text -->
-                                                </div>
-                                                <!-- /.attachment-pushed -->
-                                            </div>
-                                        </div>
-                                        <!-- /.direct-chat-text -->
-                                    </div>
-                                    <!-- /.direct-chat-msg -->
-
-                                    <!-- Message to the right -->
-                                    <div class="direct-chat-msg right">
-                                        <div class="direct-chat-info clearfix">
-                                            <span class="direct-chat-name float-right">Sarah Bullock</span>
-                                            <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
-                                        </div>
-                                        <!-- /.direct-chat-info -->
-                                        <img class="direct-chat-img" src="../../dist/img/user3-128x128.jpg" alt="Message User Image">
-                                        <!-- /.direct-chat-img -->
-                                        <div class="direct-chat-text">
-                                            <!-- Attachment -->
-                                            <div class="attachment-block clearfix" style="background: transparent;border: none;">
-                                                <img class="attachment-img float-right" src="https://imagizer.imageshack.com/img924/9061/kydYtN.jpg" alt="Attachment Image">
-
-                                                <div class="attachment-pushed float-right" style="text-align: right; margin-right: 10px;">
-                                                    <h4 class="attachment-heading">Me & You</h4>
-                                                    <div class="attachment-text">
-                                                        Singer: Alex Skrindo<br>
-
-                                                            <audio style="height: 44px;margin-top: 10px;" controls
-                                                               src="https://k003.kiwi6.com/hotlink/2rc3rz4rnp/1.mp3">
-                                                            Your browser does not support the
-                                                            <code>audio</code> element.
-                                                        </audio>
-
-                                                    </div>
-                                                    <!-- /.attachment-text -->
-                                                </div>
-                                                <!-- /.attachment-pushed -->
-                                            </div>
-                                        </div>
-                                        <!-- /.direct-chat-text -->
-                                    </div>
-                                    <!-- /.direct-chat-msg -->
-                                </div>
-
+                <div class="col-12">
+                    <div class="card">
+                        <!-- /.card-header -->
+                        <div class="card-body table-responsive p-0">
+                            <table class="table table-hover">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Singer</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td>183</td>
+                                    <td>Monita</td>
+                                    <td>Vincent Brahn</td>
+                                    <td><button type="button" class="btn btn-block btn-outline-success btn-sm">Listen</button></td>
+                                </tr>
+                                <tr>
+                                    <td>219</td>
+                                    <td>Crime</td>
+                                    <td>VAX</td>
+                                    <td><button type="button" class="btn btn-block btn-outline-success btn-sm">Listen</button></td>
+                                </tr>
+                                <tr>
+                                    <td>657</td>
+                                    <td>Water Bed</td>
+                                    <td>Heart and Colors</td>
+                                    <td><button type="button" class="btn btn-block btn-outline-success btn-sm">Listen</button></td>
+                                </tr>
+                                <tr>
+                                    <td>175</td>
+                                    <td>Farewell</td>
+                                    <td>Emilio Kauderer</td>
+                                    <td><button type="button" class="btn btn-block btn-outline-success btn-sm">Listen</button></td>
+                                </tr>
+                            </table>
                         </div>
                         <!-- /.card-body -->
                     </div>
+                    <!-- /.card -->
                 </div>
-            </div>
+            </div><!-- /.row -->
         </section>
         <!-- /.content -->
     </div>
@@ -270,6 +220,14 @@
 <script src="../../dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<script>
+    var classname = document.getElementsByClassName('btn-outline-success');
+
+    Array.from(classname).forEach(function(element) {
+        element.addEventListener('click', function() {
+            window.location.href = 'music_play.html';
+        });
+    });
+</script>
 </body>
 </html>
-
