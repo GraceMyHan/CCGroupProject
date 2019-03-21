@@ -44,18 +44,6 @@
             </li>
         </ul>
 
-        <!-- SEARCH FORM -->
-        <form class="form-inline ml-3">
-            <div class="input-group input-group-sm">
-                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                    <button class="btn btn-navbar" type="submit">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
-
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
             <!-- Messages Dropdown Menu -->
@@ -102,7 +90,6 @@
                             <i class="nav-icon fa fa-th"></i>
                             <p>
                                 Image Upload
-                                <span class="right badge badge-danger">New</span>
                             </p>
                         </a>
                     </li>
@@ -111,7 +98,6 @@
                             <i class="nav-icon fa fa-th"></i>
                             <p>
                                 Public Channel
-                                <span class="right badge badge-danger">New</span>
                             </p>
                         </a>
                     </li>
@@ -120,7 +106,6 @@
                             <i class="nav-icon fa fa-th"></i>
                             <p>
                                 User Profile
-                                <span class="right badge badge-danger">New</span>
                             </p>
                         </a>
                     </li>
@@ -147,7 +132,8 @@
         <!-- Main content -->
         <section class="content">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
                     <!-- DIRECT CHAT PRIMARY -->
                     <div class="card card-default color-palette-box">
                         <div class="card-header">
@@ -164,7 +150,7 @@
                                     <div class="direct-chat-msg">
                                         <div class="direct-chat-info clearfix">
                                             <span class="direct-chat-name float-left">Alexander Pierce</span>
-                                            <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
+                                            <span class="direct-chat-timestamp float-right">23 Jan 2:10 pm</span>
                                         </div>
                                         <!-- /.direct-chat-info -->
                                         <img class="direct-chat-img" src="../../dist/img/user1-128x128.jpg" alt="Message User Image">
@@ -178,7 +164,7 @@
                                                     <h4 class="attachment-heading">Dawn</h4>
                                                     <div class="attachment-text">
                                                         Singer: Skylike<br>
-                                                        <audio style="height: 44px;margin-top: 10px;" controls
+                                                        <audio style="height: 44px;margin-top: 10px;" controls controlsList="nodownload"
                                                                src="http://k003.kiwi6.com/hotlink/hshjwmwndw/2.mp3">
                                                             Your browser does not support the
                                                             <code>audio</code> element.
@@ -193,11 +179,11 @@
                                     </div>
                                     <!-- /.direct-chat-msg -->
 
-                                    <!-- Message to the right -->
-                                    <div class="direct-chat-msg right">
+
+                                    <div class="direct-chat-msg">
                                         <div class="direct-chat-info clearfix">
-                                            <span class="direct-chat-name float-right">Sarah Bullock</span>
-                                            <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
+                                            <span class="direct-chat-name float-left">Sarah Bullock</span>
+                                            <span class="direct-chat-timestamp float-right">23 Jan 2:05 pm</span>
                                         </div>
                                         <!-- /.direct-chat-info -->
                                         <img class="direct-chat-img" src="../../dist/img/user3-128x128.jpg" alt="Message User Image">
@@ -205,19 +191,17 @@
                                         <div class="direct-chat-text">
                                             <!-- Attachment -->
                                             <div class="attachment-block clearfix" style="background: transparent;border: none;">
-                                                <img class="attachment-img float-right" src="https://imagizer.imageshack.com/img924/9061/kydYtN.jpg" alt="Attachment Image">
+                                                <img class="attachment-img" src="https://imagizer.imageshack.com/img924/9061/kydYtN.jpg" alt="Attachment Image">
 
-                                                <div class="attachment-pushed float-right" style="text-align: right; margin-right: 10px;">
+                                                <div class="attachment-pushed">
                                                     <h4 class="attachment-heading">Me & You</h4>
                                                     <div class="attachment-text">
                                                         Singer: Alex Skrindo<br>
-
-                                                            <audio style="height: 44px;margin-top: 10px;" controls
+                                                        <audio style="height: 44px;margin-top: 10px;" controls controlsList="nodownload"
                                                                src="https://k003.kiwi6.com/hotlink/2rc3rz4rnp/1.mp3">
                                                             Your browser does not support the
                                                             <code>audio</code> element.
                                                         </audio>
-
                                                     </div>
                                                     <!-- /.attachment-text -->
                                                 </div>
@@ -233,6 +217,7 @@
                         <!-- /.card-body -->
                     </div>
                 </div>
+                <div class="col-md-2"></div>
             </div>
         </section>
         <!-- /.content -->
