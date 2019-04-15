@@ -30,11 +30,11 @@
 
       <form action="../../index2.html" method="post">
         <div class="form-group has-feedback">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="email" class="form-control" placeholder="Email" id="email">
           <span class="fa fa-envelope form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password" id="password">
           <span class="fa fa-lock form-control-feedback"></span>
         </div>
         <div class="row">
@@ -47,21 +47,11 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+            <button type="button" class="btn btn-primary btn-block btn-flat" id="signin">Sign In</button>
           </div>
           <!-- /.col -->
         </div>
       </form>
-
-      <div class="social-auth-links text-center mb-3">
-        <p>- OR -</p>
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fa fa-facebook mr-2"></i> Sign in using Facebook
-        </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fa fa-google-plus mr-2"></i> Sign in using Google+
-        </a>
-      </div>
       <!-- /.social-auth-links -->
 
       <p class="mb-1">
@@ -74,6 +64,9 @@
     <!-- /.login-card-body -->
   </div>
 </div>
+<div id="alert">
+</div>
+
 <!-- /.login-box -->
 
 <!-- jQuery -->
@@ -91,5 +84,9 @@
     })
   })
 </script>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.16.0.min.js"></script>
+<script src="../../lib/aws-cognito-sdk.min.js"></script>
+<script src="../../lib/aws-cognito-identity.min.js"></script>
+<script src="login.js"></script>
 </body>
 </html>

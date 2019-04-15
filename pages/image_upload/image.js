@@ -2,6 +2,7 @@
 var accessKeyId;
 var secretAccessKey;
 var sessionToken;
+var emotions_param=[{"Type": "", "Confidentce":0},{"Type": "", "Confidentce":0},{"Type": "", "Confidentce":0}];
 function readURL(input) {
   if (input.files && input.files[0]) {
     ProcessImage(input);
@@ -16,7 +17,10 @@ function readURL(input) {
 }
 
 document.getElementById('submitImage').addEventListener('click',  () => {
-  window.location.href = 'pages/music_play/music_list.html'
+  sessionStorage.setItem('emotion1', emotions_param[0].Type);
+  sessionStorage.setItem('emotion2', emotions_param[1].Type);
+  sessionStorage.setItem('emotion3', emotions_param[2].Type);
+  window.location.href = 'pages/music_play/music_list.html';
 })
 
 //Calls DetectFaces API and shows estimated ages of detected faces
@@ -37,6 +41,31 @@ function DetectFaces(imageData) {
     else {
       console.log(data.FaceDetails);
       var emotions = data.FaceDetails[0].Emotions;
+      console.log(emotions);
+      var first_emotion={Type: "", Confidence:0};
+      var second_emotion={Type: "", Confidence:0};
+      var third_emotion={Type: "", Confidence:0};
+
+      //Use top 3 probable emotions
+      for(var i=0;i<emotions.length;i++){
+         if(emotions[i].Confidence>first_emotion.Confidence){
+           third_emotion=second_emotion;
+           second_emotion=first_emotion;
+           first_emotion=emotions[i];
+         }else if(emotions[i].Confidence>second_emotion.Confidence){
+           third_emotion=second_emotion;
+           second_emotion=emotions[i];
+         }else if(emotions[i].Confidence>third_emotion.Confidence){
+           third_emotion=emotions[i];
+         }
+         console.log("first:"+first_emotion.Type);
+      }
+
+      emotions_param[0]=first_emotion;
+      emotions_param[1]=second_emotion;
+      emotions_param[2]=third_emotion;
+
+      $("#submitImage").show();
     }
   });
 }

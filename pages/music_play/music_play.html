@@ -31,12 +31,12 @@
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
             <!-- Messages Dropdown Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="../../pages/user/login.html">login
+            <li class="nav-item" id="login">
+                <a class="nav-link" href="../user/login.html">login
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../../pages/user/register.html">register
+            <li class="nav-item" style="display: none" id="logout">
+                <a class="nav-link" href="">logout
                 </a>
             </li>
         </ul>
@@ -60,7 +60,7 @@
                     <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">Alexander Pierce</a>
+                    <a href="#" class="d-block" id="username">Login to Explore</a>
                 </div>
             </div>
 
@@ -212,10 +212,7 @@
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="../../dist/js/pages/dashboard.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
+<script src="../util.js"></script>
 <script>
     $(function()
     {
