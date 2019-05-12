@@ -40,6 +40,7 @@ $(function(){
           sessionStorage.setItem("playSongUri", channel[index].songuri);
           sessionStorage.setItem("playSongName", channel[index].songname);
           sessionStorage.setItem("playSongArtist", channel[index].artistname);
+          sessionStorage.setItem("song-img",channel[index].s3url);
           window.location.href = '../music_play/music_play.html';
         });
       });

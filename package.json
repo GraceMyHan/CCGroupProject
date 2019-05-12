@@ -52,8 +52,10 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "jquery-ui": "^1.12.1",
+    "notie": "^4.3.1",
     "popper.js": "^1.14.3",
-    "requirejs": "^2.3.6"
+    "requirejs": "^2.3.6",
+    "sweetalert": "^2.1.2"
   },
   "peerDependencies": {
     "font-awesome": "^4.7.0"
