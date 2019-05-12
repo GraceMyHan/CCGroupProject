@@ -46,9 +46,6 @@ $(function() {
 
     // Ready
     player.addListener('ready', () => {
-      // audio.volume=0;
-      // audio.play();
-      // playPause();
       play({
         playerInstance: player,
         spotify_uri: sessionStorage.getItem("playSongUri"),
@@ -331,5 +328,27 @@ $(function() {
 });
 
 document.getElementById('shareMusic').addEventListener('click', function() {
-  window.location.href = '../public_channel/public_channel.html';
+  const now = new Date();
+  var param = {
+    data: {
+      useremail:  sessionStorage.getItem('login_user'),
+      songuri: sessionStorage.getItem("playSongUri"),
+      artistname: sessionStorage.getItem("playSongArtist"),
+      songname: sessionStorage.getItem("playSongName"),
+      s3url: sessionStorage.getItem("song-img"),
+      time: now.getTime()+""
+    }
+  };
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "https://46sekle1gj.execute-api.us-east-2.amazonaws.com/firstStage/channel");
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.onload = function (event) {
+    var data = JSON.parse(xhr.response);
+    console.log(data);
+    alert("Share success! Redirect to Channel :D");
+    window.location.href = '../public_channel/public_channel.html';
+
+  };
+  xhr.send(JSON.stringify(param));
+
 });

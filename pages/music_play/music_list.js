@@ -5,8 +5,8 @@
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.onload = function (event) {
     var data = JSON.parse(xhr.response);
-    var clientCode = data.token;
-    sessionStorage.setItem("token",clientCode);
+    // var clientCode = data.token;
+    // sessionStorage.setItem("token",clientCode);
     data = data.playlist;
     for(var index in data){
       var songInfo = data[index];

@@ -41,6 +41,8 @@ function upload(){
           if (xhr.status === 200) {
             var data = JSON.parse(xhr.response);
             sessionStorage.setItem("emotion1",data[0].Type);
+            sessionStorage.setItem("token", data[3].Type);
+
           } else {
             console.error(xhr.statusText);
           }
