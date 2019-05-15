@@ -4,8 +4,8 @@ document.getElementById('register').addEventListener('click',  () => {
   var password =document.getElementById('password').value;
 
   var poolData = {
-    UserPoolId: "us-east-2_UIHrP6yV8", // your user pool id here
-    ClientId: "55quruuf2d92mvq1ghqkfd0vrg" // your app client id here
+    UserPoolId: "", // your user pool id here
+    ClientId: "" // your app client id here
   };
   var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
 
