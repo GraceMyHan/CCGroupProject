@@ -10,8 +10,8 @@ document.getElementById('signin').addEventListener('click',  () => {
   var currentSessionToken="";
 
   var poolData = {
-    UserPoolId: "us-east-2_UIHrP6yV8", // your user pool id here
-    ClientId: "55quruuf2d92mvq1ghqkfd0vrg" // your app client id here
+    UserPoolId: "", // your user pool id here
+    ClientId: "" // your app client id here
   };
 
   var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
@@ -45,9 +45,9 @@ document.getElementById('signin').addEventListener('click',  () => {
         region: 'us-east-2'
       });
       AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-        IdentityPoolId: 'us-east-2:dec9b5cd-cdc1-4909-82a5-49d814bb3c7f',
+        IdentityPoolId: '',
         Logins: {
-          'cognito-idp.us-east-2.amazonaws.com/us-east-2_UIHrP6yV8': result.getIdToken().getJwtToken()
+          'cognito-idp.us-east-2.amazonaws.com/us-east-2_xxxxxxx': result.getIdToken().getJwtToken()
         }
       });
       AWS.config.credentials.refresh((error) => {
