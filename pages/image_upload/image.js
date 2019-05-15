@@ -10,8 +10,8 @@ var fileExt = null;
 $("#submitImage").show();
 
 AWS.config.update({
-  accessKeyId : 'AKIA367KUMJNI4YKD7HW',
-  secretAccessKey : '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',
+  accessKeyId : '',
+  secretAccessKey : '',
   region: 'us-east-2'
 });
 
@@ -84,15 +84,8 @@ document.getElementById('submitImage').addEventListener('click',  () => {
   if(sessionStorage.getItem('login_statues')=='false'){
     alert("Login to Explore our world :D");
   }else{
-    //real logic upload to S3
+    //upload to S3
     upload();
-
-    //Test without upload
-    // sessionStorage.setItem("song-img", "https://s3.us-east-2.amazonaws.com/color-and-sound/images/beauty_1557615853402.png");
-    // sessionStorage.setItem("emotion1", "HAPPY");
-    // sessionStorage.setItem("token", "BQBBPzUuxEMEbsiwg34Xk4JNjHdmehuORPF6WcAUlLZyTI1rVQ7atQ648tyNdqz9o5iT2z1uLkG8-3qZDvIfMmvR4dA4sjfY3Rpxs7JUNOfepQI68VzZc9rlDpUszo-rpPlGIw044D_zodF0KfJzdVoYicutdNlVMHy37vHBKKroSVQddwQ2caKFpvnb");
-    // window.location.href = 'pages/music_play/music_list.html';
-    //end Test
   }
 
 });
