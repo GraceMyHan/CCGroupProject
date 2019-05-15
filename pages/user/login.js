@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 document.getElementById('signin').addEventListener('click',  () => {
   var email =document.getElementById('email').value;
   var password =document.getElementById('password').value;
@@ -27,9 +28,9 @@ document.getElementById('signin').addEventListener('click',  () => {
   var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(
     authenticationData
   );
-  console.log("a``````");
+
   var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
-  console.log("b``````");
+
   cognitoUser.authenticateUser(authenticationDetails, {
     onSuccess: function(result) {
       console.log('You are now logged in.');
@@ -49,7 +50,6 @@ document.getElementById('signin').addEventListener('click',  () => {
           'cognito-idp.us-east-2.amazonaws.com/us-east-2_UIHrP6yV8': result.getIdToken().getJwtToken()
         }
       });
-      console.log("got here");
       AWS.config.credentials.refresh((error) => {
         if (error) {
           console.log("got error");
@@ -61,12 +61,7 @@ document.getElementById('signin').addEventListener('click',  () => {
           mythis.currentAccessKey=currentAccessKey;
           mythis.currentSecretKey=currentSecretKey;
           mythis.currentSessionToken=currentSessionToken;
-          console.log('AccessKey\n' + currentAccessKey);
-          console.log('SecretKey\n' + currentSecretKey);
-          console.log('SessionToken\n' + currentSessionToken);
-          console.log('Successfully logged!');
-          alert("login success");
-
+          alert('Login Successfully!');
           sessionStorage.setItem('login_statues', 'true');
           sessionStorage.setItem('login_user', email);
           window.location.href = "../../index.html";
